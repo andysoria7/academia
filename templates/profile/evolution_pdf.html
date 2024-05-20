@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Evolución de {{ student_data.first_name }} {{ student_data.last_name }}</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+
+        .text-warning {
+            color: #ffae42;
+        }
+
+        .text-success {
+            color: #28a745;
+        }
+
+        .text-danger {
+            color: #dc3545;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table th, .table td {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+            text-align: left;
+        }
+
+        .table-dark th {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .text-green {
+            color: green;
+        }
+
+        .text-red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Evolución de {{ student_data.first_name }} {{ student_data.last_name }}</h1>
+    <h2>Curso: {{ courseName }}</h2>
+    <h4>Profesor: {{ teacher }}</h4>
+    <hr>
+    <h3>Estado del Curso:
+        <span class="text-warning">CURSO EN PROGRESO</span>
+    </h3>
+
+    <h2>Condición del Estudiante:
+        <span>Alumno Regular</span>
+    </h2>
+    <br><br>
+    <h3>EVALUACIONES</h3>
+    <p>Evaluaciones realizadas por el docente a lo largo del curso</p>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Evaluación</th>
+            <th>Nota</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Evaluación 1</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>Evaluación 2</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>Evaluación 3</td>
+            <td>None</td>
+        </tr>
+        <tr class="table-dark">
+            <td>Promedio</td>
+            <td>None</td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <h3>ASISTENCIAS</h3>
+    <p>Asistencias del alumno a lo largo del curso.</p>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Asistencia</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>18-04-2024</td>
+            <td><span class="text-green"><strong>P</strong></span></td>
+        </tr>
+        <tr>
+            <td>19-04-2024</td>
+            <td><span class="text-green"><strong>P</strong></span></td>
+        </tr>
+        </tbody>
+        <tr class="table-dark">
+            <td>Total de Clases: 7</td>
+            <td>Asistencias: 2 - Ausencias: 0</td>
+        </tr>
+    </table>
+    <br>
+
+</div>
+</body>
+</html>
